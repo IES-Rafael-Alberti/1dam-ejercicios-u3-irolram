@@ -8,7 +8,7 @@ def generar_lista_numeros():
     
 def invertir_y_poner_comas(lista):
 
-     # Utilizamos sorted con reverse = True para ordenar la lista en orden inverso
+    # Utilizamos sorted con reverse = True para ordenar la lista en orden inverso
     inverso = sorted(lista, reverse = True)
     # Utilizamos join para concatenar los elementos de la lista con comas
     resultado = ", ".join(map(str, inverso))

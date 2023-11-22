@@ -15,8 +15,8 @@ def preguntar_divisa(diccionario):
 
 def main():
 
-   diccionario_divisas = diccionario()
-   preguntar_divisa(diccionario_divisas)
+    diccionario_divisas = diccionario()
+    preguntar_divisa(diccionario_divisas)
 
 
 

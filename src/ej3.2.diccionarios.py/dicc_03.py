@@ -8,30 +8,30 @@ Naranja	0.70"""
 
 def preguntar_usuario_fruta():
     fruta = input("Qué fruta quieres?: ")
-    kilos = input(f"Cuantos kilos de {fruta} quieres")
-    return fruta
+    kilos = float(input(f"Cuantos kilos de {fruta} quieres: "))
+    return fruta, kilos
 
     
 
 
 def precio_fruta(fruta):
-    Plátano = "Plátano"
-    Manzana = "Manzana"
-    Pera = "Pera"
-    Naranja = "Naranja"
+    
 
-    precio = {Plátano: "1.35", Manzana: "0.80", Pera: "0.85", Naranja: "0.70"}
+    precios = {"Plátano": 1.35, "Manzana": 0.80, "Pera": 0.85, "Naranja": 0.70}
 
-    return precio
+    return precios.get(fruta)
 
 def main():
+    fruta, kilos = preguntar_usuario_fruta()
+    precio_unitario = precio_fruta(fruta)
 
-    precio = precio_fruta()
-    preguntar_usuario_fruta()
+    
+    if precio_unitario is not None:
+        precio_total = precio_unitario * kilos
+        print(f"El precio de {kilos} kilos de {fruta} es: ${precio_total}")
+    else:
+        print(f"Lo siento, la fruta {fruta} no está en la lista.")
 
-
-
-
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
 
